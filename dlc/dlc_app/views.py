@@ -2,7 +2,7 @@ from django.shortcuts import render
 from.models import Foods
 
 def index(request):
-    foods=Foods.objects.all()[:3]
+    foods=Foods.objects.all().order_by("-created_at")[:7]
     return render(request, 'index.html',{"foods":foods})
 
 def test(request):
