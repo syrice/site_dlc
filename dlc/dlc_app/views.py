@@ -29,6 +29,9 @@ def blogpost(request):
     return render(request, 'blog-post.html', {})
 
 
+def blog_2(request):
+    return render(request, 'blog_2.html', {})
+
 def recept(request):
     if request.POST:
         comment = Comment()

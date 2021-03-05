@@ -75,7 +75,7 @@ WSGI_APPLICATION = 'dlc.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'dlc_db',
+        'NAME': 'dls_db',
         'USER': 'dlc_user',
         'PASSWORD': 'dls_root',
         'HOST': 'localhost',
