@@ -2,7 +2,8 @@ from django.shortcuts import render
 from.models import Foods
 
 def index(request):
-    return render(request, 'index.html', {})
+    foods=Foods.objects.all()[:3]
+    return render(request, 'index.html',{"foods":foods})
 
 def test(request):
     all_elements = Foods.objects.all()

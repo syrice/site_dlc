@@ -711,7 +711,9 @@
         <div class="insta-feeds d-flex flex-wrap">
             <!-- Single Insta Feeds -->
             <div class="single-insta-feeds">
-                <img src="img/bg-img/insta1.jpg" alt="">
+                {% for i in foods %}
+                <img src="http://127.0.0.1:8000/media/{{ i.image }}" alt="">
+                {% endfor %}
                 <!-- Icon -->
                 <div class="insta-icon">
                     <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
