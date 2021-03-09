@@ -1,5 +1,5 @@
-from django.shortcuts import render
-from .models import Foods, Comment
+from django.shortcuts import render,get_object_or_404
+from .models import Foods, Comment,Recept
 
 
 def index(request):
@@ -24,6 +24,9 @@ def elements(request):
 def contact(request):
     return render(request, 'contact.html', {})
 
+def recupp(request):
+    return render(request, 'recept.html', {})
+
 
 def blogpost(request):
     return render(request, 'blog-post.html', {})
@@ -32,7 +35,14 @@ def blogpost(request):
 def blog_2(request):
     return render(request, 'blog_2.html', {})
 
+def blog_3(request):
+    return render(request, 'blog_3.html', {})
+
+def burger(request):
+    return render(request, 'burger.html', {})
+
 def recept(request):
+    recept=Recept().objects.get(pk=recept_id)
     if request.POST:
         comment = Comment()
         comment.name = request.POST.get('name')
@@ -43,6 +53,8 @@ def recept(request):
 
     return render(request, 'receipe-post.html', {})
 
+def sushi(request):
+    return render(request, 'sushi.html', {})
 
 def blog_2(request):
     return render(request, 'blog_2.html', {})

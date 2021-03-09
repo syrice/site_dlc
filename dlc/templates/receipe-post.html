@@ -67,12 +67,9 @@
                     <!-- Top Social Info -->
                     <div class="col-12 col-sm-6">
                         <div class="top-social-info text-right">
-                            <a href="#"><i class="fa fa-pinterest" aria-hidden="true"></i></a>
-                            <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                            <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                            <a href="#"><i class="fa fa-dribbble" aria-hidden="true"></i></a>
-                            <a href="#"><i class="fa fa-behance" aria-hidden="true"></i></a>
-                            <a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                        <a href="https://www.pinterest.com/"><i class="fa fa-pinterest" aria-hidden="true"></i></a>
+                        <a href="https://www.facebook.com/"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                        <a href="https://www.twitter.com/"><i class="fa fa-twitter" aria-hidden="true"></i></a>
                         </div>
                     </div>
                 </div>
@@ -87,7 +84,7 @@
                     <nav class="classy-navbar justify-content-between" id="deliciousNav">
 
                         <!-- Logo -->
-                        <a class="nav-brand" href="{% static  'index.html' %}"><img src="{% static  'img/core-img/logo.png' %}" alt=""></a>
+                        <a class="nav-brand" href="{% url  'index' %}"><img src="{% static  'img/core-img/logo.png' %}" alt=""></a>
 
                         <!-- Navbar Toggler -->
                         <div class="classy-navbar-toggler">
@@ -196,7 +193,7 @@
             <div class="row h-100 align-items-center">
                 <div class="col-12">
                     <div class="breadcumb-text text-center">
-                        <h2>Recipe</h2>
+                        <h2>Receipts for vegans</h2>
                     </div>
                 </div>
             </div>
@@ -213,22 +210,21 @@
                     <div class="row">
                         <div class="col-12 col-lg-3">
                             <select name="select1" id="select1">
-                                <option value="1">All Receipies Categories</option>
-                                <option value="1">All Receipies Categories 2</option>
-                                <option value="1">All Receipies Categories 3</option>
-                                <option value="1">All Receipies Categories 4</option>
-                                <option value="1">All Receipies Categories 5</option>
+                                <option value="0">----------------</option>
+
+                                <option value="">fastfood</option>
+
                             </select>
                         </div>
-                        <div class="col-12 col-lg-3">
-                            <select name="select1" id="select2">
-                                <option value="1">All Receipies Categories</option>
-                                <option value="1">All Receipies Categories 2</option>
-                                <option value="1">All Receipies Categories 3</option>
-                                <option value="1">All Receipies Categories 4</option>
-                                <option value="1">All Receipies Categories 5</option>
-                            </select>
-                        </div>
+<!--                        <div class="col-12 col-lg-3">-->
+<!--                            <select name="select1" id="select2">-->
+<!--                                <option value="1">Burger</option>-->
+<!--                                <option value="1">All Receipies Categories 2</option>-->
+<!--                                <option value="1">All Receipies Categories 3</option>-->
+<!--                                <option value="1">All Receipies Categories 4</option>-->
+<!--                                <option value="1">All Receipies Categories 5</option>-->
+<!--                            </select>-->
+<!--                        </div>-->
                         <div class="col-12 col-lg-3">
                             <input type="search" name="search" placeholder="Search Receipies">
                         </div>
@@ -289,22 +285,54 @@
                         <!-- Single Preparation Step -->
                         <div class="single-preparation-step d-flex">
                             <h4>01.</h4>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum nec varius dui. Suspendisse potenti. Vestibulum ac pellentesque tortor. Aenean congue sed metus in iaculis. Cras a tortor enim. Phasellus posuere vestibulum ipsum, eget lobortis purus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. </p>
+                            <p> Морковь натереть на крупной терке и потушить в растительном масле с изюмом. Добавить сахар и соль. Тушить до мягкости.</p>
                         </div>
                         <!-- Single Preparation Step -->
                         <div class="single-preparation-step d-flex">
                             <h4>02.</h4>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum nec varius dui. Suspendisse potenti. Vestibulum ac pellentesque tortor. Aenean congue sed metus in iaculis. Cras a tortor enim. Phasellus posuere vestibulum ipsum, eget lobortis purus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. </p>
+                            <p>Сыр и чеснок натереть на мелкой терке, смешать, разделить на две части.</p>
                         </div>
                         <!-- Single Preparation Step -->
                         <div class="single-preparation-step d-flex">
                             <h4>03.</h4>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum nec varius dui. Suspendisse potenti. Vestibulum ac pellentesque tortor. Aenean congue sed metus in iaculis. Cras a tortor enim. Phasellus posuere vestibulum ipsum, eget lobortis purus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. </p>
+                            <p>Свеклу сварить (время варки свеклы - около 2 часов) и натереть на крупной терке.</p>
                         </div>
                         <!-- Single Preparation Step -->
                         <div class="single-preparation-step d-flex">
                             <h4>04.</h4>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum nec varius dui. Suspendisse potenti. Vestibulum ac pellentesque tortor. Aenean congue sed metus in iaculis. Cras a tortor enim. Phasellus posuere vestibulum ipsum, eget lobortis purus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. </p>
+                            <p>Орехи измельчить.</p>
+                        </div>
+                        <!-- Single Preparation Step -->
+                        <div class="single-preparation-step d-flex">
+                            <h4>05.</h4>
+                            <p> Сложить в форму в такой последовательности:
+
+- Морковь+изюм
+
+- Майонез
+
+- Сыр+чеснок
+
+- Свекла
+
+- Орехи
+
+- Майонез
+
+- Сыр+чеснок
+
+- Майонез</p>
+                        </div>
+                        <!-- Single Preparation Step -->
+                        <div class="single-preparation-step d-flex">
+                            <h4>06.</h4>
+                            <p>Не люблю серость. Я сделала украшение из того, что было в доме:))
+
+- Грибы жареные
+
+- Гранатовые зерна
+
+- Зелень</p>
                         </div>
                     </div>
 
@@ -312,53 +340,46 @@
                     <div class="col-12 col-lg-4">
                         <div class="ingredients">
                             <h4>Ingredients</h4>
-
                             <!-- Custom Checkbox -->
                             <div class="custom-control custom-checkbox">
                                 <input type="checkbox" class="custom-control-input" id="customCheck1">
-                                <label class="custom-control-label" for="customCheck1">4 Tbsp (57 gr) butter</label>
+                                <label class="custom-control-label" for="customCheck1">Морковь 2 шт (у меня они маленькие были)</label>
                             </div>
 
                             <!-- Custom Checkbox -->
                             <div class="custom-control custom-checkbox">
                                 <input type="checkbox" class="custom-control-input" id="customCheck2">
-                                <label class="custom-control-label" for="customCheck2">2 large eggs</label>
+                                <label class="custom-control-label" for="customCheck2">Изюм - 200-300 грамм (а вообще чем больше, тем лучше)</label>
                             </div>
 
                             <!-- Custom Checkbox -->
                             <div class="custom-control custom-checkbox">
                                 <input type="checkbox" class="custom-control-input" id="customCheck3">
-                                <label class="custom-control-label" for="customCheck3">2 yogurt containers granulated sugar</label>
+                                <label class="custom-control-label" for="customCheck3">Сыр - 300 грамм</label>
                             </div>
 
                             <!-- Custom Checkbox -->
                             <div class="custom-control custom-checkbox">
                                 <input type="checkbox" class="custom-control-input" id="customCheck4">
-                                <label class="custom-control-label" for="customCheck4">1 vanilla or plain yogurt, 170g container</label>
+                                <label class="custom-control-label" for="customCheck4">Чеснок - 5-6 зубчиков</label>
                             </div>
 
                             <!-- Custom Checkbox -->
                             <div class="custom-control custom-checkbox">
                                 <input type="checkbox" class="custom-control-input" id="customCheck5">
-                                <label class="custom-control-label" for="customCheck5">2 yogurt containers unbleached white flour</label>
+                                <label class="custom-control-label" for="customCheck5">Свекла - 1 шт</label>
                             </div>
 
                             <!-- Custom Checkbox -->
                             <div class="custom-control custom-checkbox">
                                 <input type="checkbox" class="custom-control-input" id="customCheck6">
-                                <label class="custom-control-label" for="customCheck6">1.5 yogurt containers milk</label>
+                                <label class="custom-control-label" for="customCheck6">Грецкие орехи - 10 шт</label>
                             </div>
 
                             <!-- Custom Checkbox -->
                             <div class="custom-control custom-checkbox">
                                 <input type="checkbox" class="custom-control-input" id="customCheck7">
-                                <label class="custom-control-label" for="customCheck7">1/4 tsp cinnamon</label>
-                            </div>
-
-                            <!-- Custom Checkbox -->
-                            <div class="custom-control custom-checkbox">
-                                <input type="checkbox" class="custom-control-input" id="customCheck8">
-                                <label class="custom-control-label" for="customCheck8">1 cup fresh blueberries </label>
+                                <label class="custom-control-label" for="customCheck7">Майонез - 500 мл</label>
                             </div>
                         </div>
                     </div>
@@ -418,7 +439,7 @@
                 <img src="{% static 'img/bg-img/insta1.jpg' %}" alt="">
                 <!-- Icon -->
                 <div class="insta-icon">
-                    <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                    <a href="https://www.instagram.com/best_fast.food/?hl=ru"><i class="fa fa-instagram" aria-hidden="true"></i></a>
                 </div>
             </div>
 
@@ -427,7 +448,7 @@
                 <img src="{% static 'img/bg-img/insta2.jpg' %}" alt="">
                 <!-- Icon -->
                 <div class="insta-icon">
-                    <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                    <a href="https://www.instagram.com/best_fast.food/?hl=ru"><i class="fa fa-instagram" aria-hidden="true"></i></a>
                 </div>
             </div>
 
@@ -436,7 +457,7 @@
                 <img src="{% static 'img/bg-img/insta3.jpg' %}" alt="">
                 <!-- Icon -->
                 <div class="insta-icon">
-                    <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                    <a href="https://www.instagram.com/best_fast.food/?hl=ru"><i class="fa fa-instagram" aria-hidden="true"></i></a>
                 </div>
             </div>
 
@@ -445,7 +466,7 @@
                 <img src="{% static 'img/bg-img/insta4.jpg' %}" alt="">
                 <!-- Icon -->
                 <div class="insta-icon">
-                    <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                    <a href="https://www.instagram.com/best_fast.food/?hl=ru"><i class="fa fa-instagram" aria-hidden="true"></i></a>
                 </div>
             </div>
 
@@ -454,7 +475,7 @@
                 <img src="{% static 'img/bg-img/insta5.jpg' %}" alt="">
                 <!-- Icon -->
                 <div class="insta-icon">
-                    <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                    <a href="https://www.instagram.com/best_fast.food/?hl=ru"><i class="fa fa-instagram" aria-hidden="true"></i></a>
                 </div>
             </div>
 
@@ -463,7 +484,7 @@
                 <img src="{% static 'img/bg-img/insta6.jpg' %}" alt="">
                 <!-- Icon -->
                 <div class="insta-icon">
-                    <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                    <a href="https://www.instagram.com/best_fast.food/?hl=ru"><i class="fa fa-instagram" aria-hidden="true"></i></a>
                 </div>
             </div>
 
@@ -472,7 +493,7 @@
                 <img src="{% static 'img/bg-img/insta7.jpg' %}" alt="">
                 <!-- Icon -->
                 <div class="insta-icon">
-                    <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                    <a href="https://www.instagram.com/best_fast.food/?hl=ru"><i class="fa fa-instagram" aria-hidden="true"></i></a>
                 </div>
             </div>
         </div>
@@ -486,16 +507,13 @@
                 <div class="col-12 h-100 d-flex flex-wrap align-items-center justify-content-between">
                     <!-- Footer Social Info -->
                     <div class="footer-social-info text-right">
-                        <a href="#"><i class="fa fa-pinterest" aria-hidden="true"></i></a>
-                        <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                        <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                        <a href="#"><i class="fa fa-dribbble" aria-hidden="true"></i></a>
-                        <a href="#"><i class="fa fa-behance" aria-hidden="true"></i></a>
-                        <a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                        <a href="https://www.pinterest.com/"><i class="fa fa-pinterest" aria-hidden="true"></i></a>
+                        <a href="https://www.facebook.com/"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                        <a href="https://www.twitter.com/"><i class="fa fa-twitter" aria-hidden="true"></i></a>
                     </div>
                     <!-- Footer Logo -->
                     <div class="footer-logo">
-                        <a href="{% static 'index.html' %}"><img src="{% static 'img/core-img/logo.png' %}" alt=""></a>
+                        <a href="{% url 'index' %}"><img src="{% static 'img/core-img/logo.png' %}" alt=""></a>
                     </div>
                     <!-- Copywrite -->
                     <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
