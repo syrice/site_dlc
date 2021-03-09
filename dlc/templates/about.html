@@ -103,84 +103,7 @@
                             </div>
 
                             <!-- Nav Start -->
-                            <div class="classynav">
-                                <ul>
-                                    <li class="active"><a href="{% url 'index'%}">Home</a></li>
-                                    <li><a href="#">Pages</a>
-                                        <ul class="dropdown">
-                                             <li><a href="{% url 'index'%}">Home</a></li>
-                                            <li><a href="{% url 'about'%}">About Us</a></li>
-                                            <li><a href="{% url 'blogpost'%}">Blog Post</a></li>
-                                            <li><a href="{% url 'recept'%}">Receipe Post</a></li>
-                                            <li><a href="{% url 'contact' %}">Contact</a></li>
-                                            <li><a href="{% url 'elements'%}">Elements</a></li>
-                                            <li><a href="#">Dropdown</a>
-                                                <ul class="dropdown">
-                                                      <li><a href="{% url 'index'%}">Home</a></li>
-                                                       <li><a href="{% url 'about'%}">About Us</a></li>
-                                                       <li><a href="{% url 'blogpost'%}">Blog Post</a></li>
-                                                       <li><a href="{% url 'recept'%}">Receipe Post</a></li>
-                                                       <li><a href="{% url 'contact' %}">Contact</a></li>
-                                                       <li><a href="{% url 'elements'%}">Elements</a></li>
-                                                    <li><a href="#">Dropdown</a>
-                                                        <ul class="dropdown">
-                                                            <li><a href="{% url 'index'%}">Home</a></li>
-                                                            <li><a href="{% url 'about'%}">About Us</a></li>
-                                                            <li><a href="{% url 'blogpost'%}">Blog Post</a></li>
-                                                            <li><a href="{% url 'recept'%}">Receipe Post</a></li>
-                                                            <li><a href="{% url 'contact' %}">Contact</a></li>
-                                                            <li><a href="{% url 'elements'%}">Elements</a></li>
-                                                        </ul>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li><a href="#">Mega Menu</a>
-                                        <div class="megamenu">
-                                                <ul class="single-mega cn-col-4">
-                                                <li><a href="{% url 'index'%}">Home</a></li>
-                                                <li><a href="{% url 'about'%}">About Us</a></li>
-                                                <li><a href="{% url 'blogpost'%}">Blog Post</a></li>
-                                                <li><a href="{% url 'recept'%}">Receipe Post</a></li>
-                                                <li><a href="{% url 'contact' %}">Contact</a></li>
-                                                <li><a href="{% url 'elements'%}">Elements</a></li>
-                                            </ul>
-                                            <ul class="single-mega cn-col-4">
-                                                <li><a href="{% url 'index'%}">Home</a></li>
-                                                <li><a href="{% url 'about'%}">About Us</a></li>
-                                                <li><a href="{% url 'blogpost'%}">Blog Post</a></li>
-                                                <li><a href="{% url 'recept'%}">Receipe Post</a></li>
-                                                <li><a href="{% url 'contact' %}">Contact</a></li>
-                                                <li><a href="{% url 'elements' %}">Elements</a></li>
-                                            </ul>
-                                            <ul class="single-mega cn-col-4">
-                                                <li><a href="{% url 'index' %}">Home</a></li>
-                                                <li><a href="{% url 'about' %}">About Us</a></li>
-                                                <li><a href="{% url 'blogpost' %}">Blog Post</a></li>
-                                                <li><a href="{% url 'recept' %}">Receipe Post</a></li>
-                                                <li><a href="{% url 'contact' %}">Contact</a></li>
-                                                <li><a href="{% url 'elements'%}">Elements</a></li>
-                                            </ul>
-                                            <div class="single-mega cn-col-4">
-                                                <div class="receipe-slider owl-carousel">
-                                                    <a href="#"><img src="{% static 'img/bg-img/bg1.jpg' %}" alt=""></a>
-                                                    <a href="#"><img src="{% static 'img/bg-img/bg6.jpg' %}" alt=""></a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </li>
-                                 <li><a href="{% url 'recept' %}">Receipies</a></li>
-                                    <li><a href="{% url 'recept' %}">4 Vegans</a></li>
-                                    <li><a href="{% url 'contact'%}">Contact</a></li>
-                                </ul>
-
-                                <!-- Newsletter Form -->
-                                <div class="search-btn">
-                                    <i class="fa fa-search" aria-hidden="true"></i>
-                                </div>
-
-                            </div>
+                            {% include 'helper.html'  %}
                             <!-- Nav End -->
                         </div>
                     </nav>
@@ -286,18 +209,19 @@
                 <div class="col-12">
                     <div class="contact-form-area">
                         <form action="#" method="post">
+                            {% csrf_token %}
                             <div class="row">
                                 <div class="col-12 col-lg-6">
-                                    <input type="text" class="form-control" id="name" placeholder="Name">
+                                    <input type="text" class="form-control" id="name" name="name" placeholder="Name">
                                 </div>
                                 <div class="col-12 col-lg-6">
-                                    <input type="email" class="form-control" id="email" placeholder="E-mail">
+                                    <input type="email" class="form-control" id="email"  name="email" placeholder="E-mail">
                                 </div>
                                 <div class="col-12">
-                                    <input type="text" class="form-control" id="subject" placeholder="Subject">
+                                    <input type="text" class="form-control" id="subject" name="Subject" placeholder="Subject">
                                 </div>
                                 <div class="col-12">
-                                    <textarea name="message" class="form-control" id="message" cols="30" rows="10" placeholder="Message"></textarea>
+                                    <textarea name="message" class="form-control" id="message" name="text" cols="30" rows="10" placeholder="Message"></textarea>
                                 </div>
                                 <div class="col-12 text-center">
                                     <button class="btn delicious-btn mt-30" type="submit">Send</button>
