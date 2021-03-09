@@ -56,8 +56,6 @@ def recept(request):
 def sushi(request):
     return render(request, 'sushi.html', {})
 
-def blog_2(request):
-    return render(request, 'blog_2.html', {})
 
 def about(request):
     return render(request, 'about.html', {})
