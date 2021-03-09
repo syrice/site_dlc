@@ -41,8 +41,9 @@ def blog_3(request):
 def burger(request):
     return render(request, 'burger.html', {})
 
-def recept(request):
-    recept=Recept().objects.get(pk=recept_id)
+def recept(request,recept_id):
+    recept=get_object_or_404(Recept,pk=recept_id)
+
     if request.POST:
         comment = Comment()
         comment.name = request.POST.get('name')
@@ -51,11 +52,16 @@ def recept(request):
         comment.text = request.POST.get('text')
         comment.save()
 
-    return render(request, 'receipe-post.html', {})
+    ctx = {
+        "recept": recept
+    }
+    return render(request, 'receipe-post.html', ctx)
 
 def sushi(request):
     return render(request, 'sushi.html', {})
 
+def blog_2(request):
+    return render(request, 'blog_2.html', {})
 
 def about(request):
     return render(request, 'about.html', {})
