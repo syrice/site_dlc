@@ -24,6 +24,7 @@ def elements(request):
 def contact(request):
     return render(request, 'contact.html', {})
 
+
 def recupp(request):
     return render(request, 'recept.html', {})
 
@@ -35,15 +36,18 @@ def blogpost(request):
 def blog_2(request):
     return render(request, 'blog_2.html', {})
 
+
 def blog_3(request):
     return render(request, 'blog_3.html', {})
+
 
 def burger(request):
     return render(request, 'burger.html', {})
 
-def recept(request,recept_id):
-    recept=get_object_or_404(Recept,pk=recept_id)
 
+def recept(request,recept_id):
+    recept=get_object_or_404(Recept, pk=recept_id)
+    print("Steps: ", recept.steps['steps'])
     if request.POST:
         comment = Comment()
         comment.name = request.POST.get('name')
@@ -51,17 +55,22 @@ def recept(request,recept_id):
         comment.subject = request.POST.get('subject')
         comment.text = request.POST.get('text')
         comment.save()
-
     ctx = {
         "recept": recept
     }
     return render(request, 'receipe-post.html', ctx)
 
+
 def sushi(request):
     return render(request, 'sushi.html', {})
+
 
 def blog_2(request):
     return render(request, 'blog_2.html', {})
 
+
 def about(request):
     return render(request, 'about.html', {})
+
+def all(request):
+    return render(request, 'all_recepts.html', {})

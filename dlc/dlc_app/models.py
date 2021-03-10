@@ -23,7 +23,10 @@ class Comment(models.Model):
 class Recept(models.Model):
     name = models.CharField(max_length=50, null=False, blank=False)
     image = models.ImageField(upload_to="news_image", null=True)
+    steps = models.JSONField(null=False, default={"steps": []})
+    ings = models.JSONField(null=False, default={})
 
     def __str__(self):
         return f"{self.name}"
 
+#
